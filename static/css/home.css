@@ -65,23 +65,35 @@ body{
 .nav-content{
     background-color: var(--svetloplava);
     height: 100%;
-    width: 28%; /* Could be more or less, depending on screen size */
+    width: auto; 
+    padding: 35px;
     position: absolute;
    
 }
 
-.nav-mobile ul{
+.nav-content span{
+    position: absolute;
+    right: 15;
+    cursor: pointer;
+    top: 15;
+}
+
+.nav-links{
     display: grid;
     gap: 35px;
-    margin-top: 150px;
+    margin-top: 75px;
+    justify-content: center;
 
 }
+
 .nav-link{
-    list-style-type: none;
     background-color: var(--tamnoplava);
-    text-align: center;
     border-radius: 20px;
-    width: 305px;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link a{
@@ -105,15 +117,49 @@ body{
 }
 .navigacija-hamburger{
     background-color: #76ABAE;
+    padding: 10;
+    border-radius: 140px;
+    font-weight: 800;
+    font-size: 23;
+    height: 50px;
+    width: 50px;
+    border: 0;
 }
 .navigacija-desno{
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 20px;
 }
-.korisnik{
-    background-color: #76ABAE;
+.korisnik img{
+    width: 50px;
 }
-.korpa{
-    background-color: #76ABAE;
+.korpa img{
+    width: 50px;
 }
+
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+
+.social-networks{
+
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    align-items: end;
+
+}
+
+.social-networks a img{
+    width: 50px;
+
+}
+

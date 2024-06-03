@@ -2,33 +2,58 @@
 {% block content %}
 <div id="navMobile" class="nav-mobile" style="display: none;">
     <div class="nav-content">
-        <ul>
+
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="">
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-link">
+                <a href="{% url 'home' %}">Pocetna</a>
+            </div>
+    
+            <div class="nav-link">
+                <a href="{% url 'proizvodi' %}">Proizvodi</a>
+            </div>
+    
+            <div class="nav-link">
+                <a href="{% url 'usluge' %}">Usluge</a>
+            </div>
+    
+            <div class="nav-link">
+                <a href="{% url 'tehnologija' %}">Tehnologija</a>
+            </div>
+    
+            <div class="nav-link">
+                <a href="{% url 'onama' %}">O nama</a>
+            </div>
+
+            <div class="nav-link">
+                <a href="{% url 'blog' %}">Blog</a>
+            </div>
+    
+            <div class="nav-link">
+                <a href="{% url 'kontakt' %}">Kontakt</a>
+            </div>
+
+            
+            
+
+        </div>
+
+           <div class="social-networks">
+
+            <a href="">
+                <img src="{% static 'images/instagram.png' %}" alt="">
+            </a>
+            <a href="">
+                <img src="{% static 'images/instagram.png' %}" alt="">
+            </a>
+
+           </div>
         
-            <li class="nav-link">
-                <a href="">Pocetna</a>
-            </li>
-    
-            <li class="nav-link">
-                <a href="">Proizvodi</a>
-            </li>
-    
-            <li class="nav-link">
-                <a href="">Usluge</a>
-            </li>
-    
-            <li class="nav-link">
-                <a href="">Tehnologija</a>
-            </li>
-    
-            <li class="nav-link">
-                <a href="">O nama</a>
-            </li>
-    
-            <li class="nav-link">
-                <a href="">Kontakt</a>
-            </li>
-    
-        </ul>
+        <span onclick="zatvaranjeNavigacije()">&#x2715;</span>
+
     </div>
 
 </div>
@@ -40,13 +65,15 @@
     </a>
     
     <div class="navigacija-desno">
+        <a class="korpa" href="">
+            <img src="{% static 'images/korpa.png' %}" alt="">
+        </a>
+
         <a class="korisnik" href="">
-            <img src="" alt="">
+            <img src="{% static 'images/user.png' %}" alt="">
         </a>
         
-        <a class="korpa" href="">
-            <img src="" alt="">
-        </a>
+       
     </div>
 
 </div>
