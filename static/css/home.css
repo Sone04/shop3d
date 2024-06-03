@@ -1,0 +1,119 @@
+
+@font-face {
+    font-family: 'Cabinetrotesk-Medium';
+    src: url('/static/fonts/CabinetGrotesk-Medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Allema';
+    src: url('/static/fonts/Allema.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Breety-Italic';
+    src: url('/static/fonts/Breety-Italic.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Archivo-ExtraBold';
+    src: url('/static/fonts/Archivo-ExtraBold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Archivo-Bold';
+    src: url('/static/fonts/Archivo-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Archivo-Medium';
+    src: url('/static/fonts/Archivo-Medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Archivo-SemiBold';
+    src: url('/static/fonts/Archivo-SemiBold.otf') format("opentype");
+}
+
+:root {
+    --tamnoplava: #222831;
+    --siva: #31363F;
+    --svetloplava: #76ABAE;
+    --bela: #EEEEEE;
+  }
+
+
+
+
+body{
+
+    background-color: var(--bela) ;
+
+}
+
+
+
+.nav-mobile{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden;
+}
+
+.nav-content{
+    background-color: var(--svetloplava);
+    height: 100%;
+    width: 28%; /* Could be more or less, depending on screen size */
+    position: absolute;
+   
+}
+
+.nav-mobile ul{
+    display: grid;
+    gap: 35px;
+    margin-top: 150px;
+
+}
+.nav-link{
+    list-style-type: none;
+    background-color: var(--tamnoplava);
+    text-align: center;
+    border-radius: 20px;
+    width: 305px;
+}
+
+.nav-link a{
+    font-family: 'Archivo-Medium', sans-serif;
+    text-decoration: none;
+    color: #76ABAE;
+}
+
+
+
+
+
+
+
+.navigacija{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #31363F;
+}
+.navigacija-hamburger{
+    background-color: #76ABAE;
+}
+.navigacija-desno{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.korisnik{
+    background-color: #76ABAE;
+}
+.korpa{
+    background-color: #76ABAE;
+}

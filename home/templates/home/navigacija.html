@@ -1,0 +1,72 @@
+{% load static %}
+{% block content %}
+<div id="navMobile" class="nav-mobile" style="display: none;">
+    <div class="nav-content">
+        <ul>
+        
+            <li class="nav-link">
+                <a href="">Pocetna</a>
+            </li>
+    
+            <li class="nav-link">
+                <a href="">Proizvodi</a>
+            </li>
+    
+            <li class="nav-link">
+                <a href="">Usluge</a>
+            </li>
+    
+            <li class="nav-link">
+                <a href="">Tehnologija</a>
+            </li>
+    
+            <li class="nav-link">
+                <a href="">O nama</a>
+            </li>
+    
+            <li class="nav-link">
+                <a href="">Kontakt</a>
+            </li>
+    
+        </ul>
+    </div>
+
+</div>
+
+<div class="navigacija">
+    <button onclick="otvaranjeNavigacije()" class="navigacija-hamburger">&#x2630;</button>
+    <a href="">
+        <img src="" alt="">
+    </a>
+    
+    <div class="navigacija-desno">
+        <a class="korisnik" href="">
+            <img src="" alt="">
+        </a>
+        
+        <a class="korpa" href="">
+            <img src="" alt="">
+        </a>
+    </div>
+
+</div>
+
+<script>
+
+    function otvaranjeNavigacije() {
+        navMobile = document.getElementById("navMobile");
+        navMobile.style.display = 'block';
+
+
+    }
+
+    function zatvaranjeNavigacije() {
+        navMobile = document.getElementById("navMobile");
+        navMobile.style.display = 'none';
+
+
+    }
+
+</script>
+
+{% endblock content %}
