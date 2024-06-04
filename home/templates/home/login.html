@@ -1,0 +1,30 @@
+{% load static %}
+
+<html lang="en" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+   <header>
+    {% include 'home/navigacija.html' %}
+
+   </header>
+   <main>
+    <div class="error">
+        {{error}}
+    </div>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input name="korisnicko_ime" placeholder="Unesite korisnicko ime.." type="text">
+            <input name="lozinka" placeholder="Unesite lozinku.." type="password">
+
+            <button>Prijavi se</button>
+        </form>
+
+   </main>
+   
+</body>
+</html>

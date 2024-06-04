@@ -66,10 +66,10 @@
     
     <div class="navigacija-desno">
         <a class="korpa" href="">
-            <img src="{% static 'images/korpa.png' %}" alt="">
+            <img src="{% static 'images/cart.png' %}" alt="">
         </a>
 
-        <a class="korisnik" href="">
+        <a class="korisnik" href="{% url 'testiraj_usera' %}">
             <img src="{% static 'images/user.png' %}" alt="">
         </a>
         
@@ -94,6 +94,32 @@
 
     }
 
+   
+
+
+
+</script>
+
+<script>
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Prevent default link behavior (redirect)
+    event.preventDefault();
+
+    // Get the anchor tag within the clicked nav-link
+    const targetLink = this.querySelector('a');
+    targetLinkReal = targetLink.getAttribute('href')
+
+    // Simulate click on the anchor tag
+    window.location.href = targetLinkReal;
+
+    // Optionally, redirect the user after the simulated click
+    // const targetUrl = targetLink.getAttribute('href');
+    // window.location.href = targetUrl;
+  });
+});
 </script>
 
 {% endblock content %}

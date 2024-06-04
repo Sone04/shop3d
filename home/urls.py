@@ -12,5 +12,9 @@ urlpatterns = [
     path('tehnologija/', views.tehnologija, name="tehnologija"),
     path('blog/', views.blog, name="blog"),
     path('usluge/', views.usluge, name="usluge"),
+
+
+    path('testiraj_usera/', views.testiraj_usera, name="testiraj_usera"),
+    path('login', views.login, name="login"),
 ] 
 
