@@ -15,6 +15,9 @@ urlpatterns = [
 
 
     path('testiraj_usera/', views.testiraj_usera, name="testiraj_usera"),
-    path('login', views.login, name="login"),
+    path('login/', views.login, name="login"),
+
+
+    path('comming_soon', views.comming_soon, name="comming_soon"),
 ] 
 
