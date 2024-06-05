@@ -1,15 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Postavljamo visinu tijela na visinu prozora preglednika */
+    background-color: #f0f0f0; /* Dodajemo pozadinu */
+}
+
 .coming-soon-container {
     text-align: center;
-    margin-top: 100px;
+    padding: 50px;
+    background-color: #ffffff; /* Dodajemo bijelu pozadinu kontejneru */
+    border-radius: 10px; /* Dodajemo zaobljenje rubova */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Dodajemo blagu sjenu */
+    width: 80%; /* Definiramo širinu kontejnera */
+    max-width: 500px; /* Definiramo maksimalnu širinu kontejnera */
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 48px; /* Povećavamo veličinu naslova */
     color: #333;
+    font-family: 'Arial', sans-serif; /* Koristimo Arial kao font */
+    margin-bottom: 20px; /* Dodajemo marginu ispod naslova */
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px; /* Povećavamo veličinu teksta */
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Povećavamo razmak između redaka */
 }
+
+p:last-child {
+    margin-bottom: 0; /* Uklanjamo marginu samo sa zadnjeg paragrafa */
+}
+
+p:last-child {
+    margin-bottom: 0; /* Uklanja margine samo sa zadnjeg paragrafa */
+}
+
+.coming-soon-container p:nth-child(2) {
+    font-style: italic; /* Dodajemo italic stil samo drugom paragrafu */
+}
+
+.coming-soon-container p:last-child {
+    font-weight: bold; /* Dodajemo bold stil zadnjem paragrafu */
+}
+
+@keyframes blinking {
+    0%, 49% { opacity: 0 }
+    50%, 100% { opacity: 1 }
+}
+
+.dot-1, .dot-2, .dot-3 {
+    display: inline-block;
+    margin-left: 2px;
+    opacity: 0;
+    animation: blinking 1.4s infinite;
+} 
+
+ @keyframes typing-dots {
+    0% { opacity: 0 }
+    25% { opacity: 1 }
+}
+
+.dot-1, .dot-2, .dot-3 {
+    display: inline-block;
+    margin-left: 2px; 
+    opacity: 0;
+    animation: typing-dots 1.5s steps(1, end) infinite;
+}
+
+.dot-2 {
+    animation-delay: 0.5s; 
+}
+
+.dot-3 {
+    animation-delay: 1s; 
+}
+
+
+

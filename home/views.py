@@ -69,8 +69,8 @@ def login (request):
 
 def comming_soon(request):
 
-    context = {}
+   
 
-    return redirect('home/comming_soon.html', context)
+    return render(request, 'home/comming_soon.html')
 
     
