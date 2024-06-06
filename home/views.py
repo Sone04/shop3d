@@ -1,35 +1,78 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.http import JsonResponse
 
 # Create your views here.
 
 def home (request):
 
-    return render(request, 'home/home.html')
+    if request.user.is_authenticated:
+        korisnicko_ime = request.user.username
+        email = request.user.email
+    else:
+        korisnicko_ime = ''
+        email = ''
+        
+
+   
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/home.html', context)
 
 def kontakt (request):
 
-    return render(request, 'home/kontakt.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/kontakt.html', context)
 
 def onama (request):
 
-    return render(request, 'home/onama.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/onama.html', context)
 
 def proizvodi (request):
 
-    return render(request, 'home/proizvodi.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/proizvodi.html', context)
 
 def tehnologija (request):
 
-    return render(request, 'home/tehnologija.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/tehnologija.html', context)
 
 def usluge (request):
 
-    return render(request, 'home/usluge.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/usluge.html', context)
 
 def blog (request):
 
-    return render(request, 'home/blog.html')
+    korisnicko_ime = request.user.username
+    email = request.user.email
+
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/blog.html', context)
 
 
 def testiraj_usera(request):
@@ -41,6 +84,7 @@ def testiraj_usera(request):
     
     if korisnik.is_authenticated:
         return redirect('home')
+
     
 def login (request):
 
@@ -69,8 +113,20 @@ def login (request):
 
 def comming_soon(request):
 
-   
+    korisnicko_ime = request.user.username
+    email = request.user.email
 
-    return render(request, 'home/comming_soon.html')
+    context = {'korisnicko_ime':korisnicko_ime, 'email':email}
+
+    return render(request, 'home/comming_soon.html', context)
+
+
+def logout_view(request):
+
+    logout(request)
+
+    return redirect('home')
+
+
 
     

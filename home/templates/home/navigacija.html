@@ -69,14 +69,51 @@
             <img src="{% static 'images/cart.png' %}" alt="">
         </a>
 
-        <a class="korisnik" href="{% url 'testiraj_usera' %}">
-            <img src="{% static 'images/user.png' %}" alt="">
-        </a>
+       
+        <div class="korisnik">
+            {% if user.is_authenticated %}
+            <img src="{% static 'images/user.png' %}" alt="" class="korisnik-toggle">
+            <div class="korisnik-menu">
+                <p>Ime: {{ korisnicko_ime }}</p>
+                <p>Email: {{ email }}</p>
+                <a href="{% url 'logout' %}"><button class="logout-button">Logout</button></a>
+                <!-- Dodajte više informacija po potrebi -->
+            </div>
+        {% else %}
+            <a href="{% url 'testiraj_usera' %}">
+                <img src="{% static 'images/user.png' %}" alt="">
+            </a>
+        {% endif %}
+       
+        </div>
         
        
-    </div>
+ </div>
 
-</div>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var korisnikToggle = document.querySelector('.korisnik-toggle');
+        var korisnikMenu = document.querySelector('.korisnik-menu');
+    
+        korisnikToggle.addEventListener('click', function() {
+            if (korisnikMenu.style.display === "block") {
+                korisnikMenu.style.display = "none";
+            } else {
+                korisnikMenu.style.display = "block";
+            }
+        });
+    
+        // Dodajte funkcionalnost za zatvaranje menija ako kliknete van menija
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.korisnik-toggle')) {
+                if (korisnikMenu.style.display === "block") {
+                    korisnikMenu.style.display = "none";
+                }
+            }
+        });
+    });
+    </script>
+
 
 <script>
 
@@ -90,12 +127,7 @@
     function zatvaranjeNavigacije() {
         navMobile = document.getElementById("navMobile");
         navMobile.style.display = 'none';
-
-
     }
-
-   
-
 
 
 </script>
