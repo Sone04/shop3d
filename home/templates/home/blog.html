@@ -3,16 +3,22 @@
 <html lang="en" class="html">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Na našem blogu istražujemo novosti i trendove u svetu 3D štampe, nudeći savete i inspiraciju za primenu aditivne proizvodnje u različitim industrijama">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
 </head>
 <body>
    <header>
     {% include 'home/navigacija.html' %}
 
    </header>
-   <main></main>
-   <footer></footer>
+   <main>
+    {% include 'home/comming_soon.html' %}
+   </main>
+   <footer>
+    Copyright © 2024 3D Printing NS
+   </footer>
 </body>
 </html>

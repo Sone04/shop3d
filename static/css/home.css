@@ -215,3 +215,12 @@ body{
 .logout-button:hover {
     background-color: #d32f2f; /* Tamnija crvena boja */
 }
+
+footer{
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #31363F;
+    color: var(--svetloplava);
+}

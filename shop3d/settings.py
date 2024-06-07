@@ -23,10 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-7x*lnb6zs7qg7yirx(tblwal(6bw-zxgsq!z20+mioyy5%t9bg'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# CSRF_COOKIE_DOMAIN = '3dprinting.rs' # *
 
-ALLOWED_HOSTS = []
+# CSRF_COOKIE_SECURE = True # *
+# SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin' # *
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True # *
+
+# CSRF_TRUSTED_ORIGINS = ['https://3dprinting.rs', 'https://www.3dprinting.rs'] # *
+ 
+ALLOWED_HOSTS = ['*'] # *
 
 
 # Application definition

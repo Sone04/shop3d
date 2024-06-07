@@ -3,16 +3,22 @@
 <html lang="en" class="html">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Kontaktirajte nas putem e-mail: 3d.printing.ns@gmail.com | instagram: 3d.printing_ns ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
 </head>
 <body>
    <header>
     {% include 'home/navigacija.html' %}
 
    </header>
-   <main></main>
-   <footer></footer>
+   <main>
+    {% include 'home/comming_soon.html' %}
+   </main>
+   <footer>
+    Copyright © 2024 3D Printing NS
+   </footer>
 </body>
 </html>

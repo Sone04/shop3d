@@ -3,9 +3,11 @@
 <html lang="en" class="html">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="3D Shop je idealno mesto za pretvaranje vaše ideje i mašte u neki prototip ili figuricu koja ce ukrasiti Vaš dom. | @3d.printing_ns">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
@@ -18,12 +20,16 @@
 
    </header>
    <main> 
-
+        {% include 'home/comming_soon.html' %}
         <!-- <div class="panel panel-default">
           <div class="panel-body">A Basic Panel</div>
         </div> -->
 
     </main>
+
+    <footer>
+      Copyright © 2024 3D Printing NS
+    </footer>
    
 </body>
 </html>

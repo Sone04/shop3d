@@ -3,18 +3,24 @@
 <html lang="en" class="html">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Specijalizujemo se za inovativna rešenja u oblasti 3D štampe, pružajući prilagođene usluge i proizvode visoke kvalitete za različite industrijske potrebe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>O nama</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
 </head>
 <body>
    <header>
     {% include 'home/navigacija.html' %}
 
-    <p>MI SMO MALA PORODICNA FIRMA KOJA PUNI JASTOGE PEDERE</p>
+   
 
    </header>
-   <main></main>
-   <footer></footer>
+   <main>
+    {% include 'home/comming_soon.html' %}
+   </main>
+   <footer>
+    Copyright © 2024 3D Printing NS
+   </footer>
 </body>
 </html>

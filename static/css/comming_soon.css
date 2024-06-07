@@ -1,11 +1,14 @@
 body {
+  
+    /* Postavljamo visinu tijela na visinu prozora preglednika */
+    background-color: #f0f0f0; /* Dodajemo pozadinu */
+}
+main{
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Postavljamo visinu tijela na visinu prozora preglednika */
-    background-color: #f0f0f0; /* Dodajemo pozadinu */
 }
-
 .coming-soon-container {
     text-align: center;
     padding: 50px;
